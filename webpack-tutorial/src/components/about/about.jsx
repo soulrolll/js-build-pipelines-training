@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import photo from 'assets/img/banks-peninsula.jpg';
 
 class About extends Component {
-  render () {  
+  render () {
     return (
       <div className="container-fluid">
         <div className="row mb-3">

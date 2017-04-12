@@ -1,26 +1,26 @@
 import React, { Component, PropTypes } from 'react';
 
-// import './search.scss';
+import './search.scss';
 
 class Search extends Component {
   constructor (props) {
     super(props);
-    
+
     this.state = {
       searchFieldValue: ''
     };
 
     this.searchFieldChange = this.searchFieldChange.bind(this);
   }
-  
+
   searchFieldChange (event) {
     this.setState({
       searchFieldValue: event.target.value
     });
     this.props.searchValueEntered(event.target.value);
   }
-  
-  render () {  
+
+  render () {
     return (
       <div className="mb-3">
         <label className="search-label">

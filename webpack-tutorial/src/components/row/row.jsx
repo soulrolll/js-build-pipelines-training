@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Clipboard from 'clipboard';
 
-// import './row.scss';
+import './row.scss';
 
 class Row extends Component {
   constructor (props) {

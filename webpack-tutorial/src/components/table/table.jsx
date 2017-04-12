@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 
-// import './table.scss';
+import './table.scss';
 import Row from 'components/row/row';
 
 class Table extends Component {
   renderRows () {
     let rows = [];
-    
-    this.props.mpData.forEach((mp, index) => {    
+
+    this.props.mpData.forEach((mp, index) => {
       const fulltext = Object.values(mp).join().toLowerCase();
       const searchValue = this.props.searchFieldValue.toLowerCase();
 
@@ -17,17 +17,17 @@ class Table extends Component {
         );
       }
     });
-    
+
     if (rows.length === 0) {
       rows = (<tr><td colSpan="4"><i>Nothing found</i></td></tr>);
     }
-    
+
     return rows;
   }
-  
+
   render () {
     const rows = this.renderRows();
-    
+
     return (
       <table className="table">
         <thead>
